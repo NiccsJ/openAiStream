@@ -27,8 +27,8 @@ def generate_streaming_response():
                 stream=True,  # Enable streaming from OpenAI
             )
             print(response)
-            return Response(response, content_type="text/event-stream")
-            # return Response(json.dumps({"hello": "hi"}))
+            # return Response(response, content_type="text/event-stream")
+            return Response(json.dumps({"hello": "hi"}))
     # except Exception as e:
     #     print(f'Some error occurred in code: {e}')
     #     return Response(json.dumps({"hello": "bye"}))
